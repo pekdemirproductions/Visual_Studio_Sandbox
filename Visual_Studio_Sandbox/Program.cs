@@ -14,7 +14,9 @@ namespace Visual_Studio_Sandbox
             StartOfProgram ();
 
             // ACCESS EXTERNAL CLASSES (Do some random shit)
-            AccessExternalClasses(); 
+            // AccessExternalClasses();
+
+            MyErrorHandler.ErrorHandler(0);
             
             // END OF PROGRAM (Say "Goodbye" & wait for "Enter")
             EndOfProgram();
