@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Visual_Studio_Sandbox
 {
-    class Class1
+    class MyClass
     {
     }
 }

@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MyClass.cs" />
     <Compile Include="MyErrorHandler.cs" />
     <Compile Include="Spaceship.cs" />
     <Compile Include="SomeClass.cs" />

@@ -13,11 +13,16 @@ namespace Visual_Studio_Sandbox
             // START OF PROGRAM (Say "Hello" and print start time)
             StartOfProgram ();
 
+            #region Unused Method Calls
+
             // ACCESS EXTERNAL CLASSES (Do some random shit)
             // AccessExternalClasses();
 
-            MyErrorHandler.ErrorHandler(0);
-            
+            // Test Exception Handling
+            // MyErrorHandler.ErrorHandler(0);
+
+            #endregion
+
             // END OF PROGRAM (Say "Goodbye" & wait for "Enter")
             EndOfProgram();
         }
