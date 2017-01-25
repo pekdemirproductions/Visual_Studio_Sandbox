@@ -13,7 +13,9 @@ namespace Visual_Studio_Sandbox
             Console.WriteLine("This comes from the ErrorHandler method inside the 'MyErrorHandler' class");
             Console.WriteLine("Received argument: {0}", passedArgument);
 
-            Console.WriteLine("Enter a number: ");
+
+
+            Console.WriteLine("Enter a number to divide by: ");
             int a;
             bool check = int.TryParse(Console.ReadLine(), out a);
 
@@ -28,6 +30,10 @@ namespace Visual_Studio_Sandbox
 
             try
             {
+                if (passedArgument == 0)
+                {
+                    throw new ArgumentException("This is so terrible!");
+                }
                 int calculation;
                 calculation = a / passedArgument;
                 Console.WriteLine("Result of calculation was: {0}", calculation);
@@ -37,6 +43,7 @@ namespace Visual_Studio_Sandbox
             {
                 Console.WriteLine("Something terrible has happened!");
                 Console.WriteLine(Hanswurst);
+
             }
             finally
             {

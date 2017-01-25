@@ -8,36 +8,56 @@ namespace Visual_Studio_Sandbox
 {
     public class Program
     {
-        public static void Main(String[] args)
+        public static int Main(String[] args)
         {
             // START OF PROGRAM (Say "Hello" and print start time)
             StartOfProgram ();
 
-            // ACCESS EXTERNAL CLASSES (Do some random shit)
-            // AccessExternalClasses();
+            #region Active Method Calls
+                try
+                {
+                    MyClass myClassInstance = new MyClass();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("I have caught an exception.");
+                    Console.WriteLine(e);
+                }
+            #endregion Active Method Calls
 
-            MyErrorHandler.ErrorHandler(0);
-            
+            #region Unused Method Calls
+
+                // ACCESS EXTERNAL CLASSES (Do some random shit)
+                // AccessExternalClasses();
+
+                // Test Exception Handling
+                // MyErrorHandler.ErrorHandler(0);
+
+            #endregion Unused Method Calls
+
             // END OF PROGRAM (Say "Goodbye" & wait for "Enter")
             EndOfProgram();
+
         }
 
-        static void AccessExternalClasses()
-        {
-            SomeClass program1 = new SomeClass();
+        #region Unused Methods
+            static void AccessExternalClasses()
+            {
+                SomeClass program1 = new SomeClass();
 
-            SomeClass.myStaticID = 3000;
-            program1.myID = 3000;
+                SomeClass.myStaticID = 3000;
+                program1.myID = 3000;
 
-            Console.WriteLine("SomeClass.myStaticID = {0}", SomeClass.myStaticID);
-            Console.WriteLine("SomeClass.myID = {0}", program1.myID);
+                Console.WriteLine("SomeClass.myStaticID = {0}", SomeClass.myStaticID);
+                Console.WriteLine("SomeClass.myID = {0}", program1.myID);
 
-            SomeClass.DoSomething();
-            program1.DoSomethingInstanced();
+                SomeClass.DoSomething();
+                program1.DoSomethingInstanced();
 
-            Console.WriteLine("SomeClass.myStaticID = {0}", SomeClass.myStaticID);
-            Console.WriteLine("SomeClass.myID = {0}", program1.myID);
-        }
+                Console.WriteLine("SomeClass.myStaticID = {0}", SomeClass.myStaticID);
+                Console.WriteLine("SomeClass.myID = {0}", program1.myID);
+            }
+        #endregion Unused Methods
 
         static void StartOfProgram()
         {
